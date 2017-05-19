@@ -1,0 +1,32 @@
+<style>
+	body {background-color: orange;};
+
+
+</style>
+
+
+<h1>EatDaBurger</h1>
+
+<ul>
+  {{#each burgers}}
+    <li>
+      <p>
+        {{this.id}}. {{this.burger}}
+
+        {{!-- <form action="/{{this.id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button type="submit">Delete Movie!</button>
+        </form> --}}
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+
+<h2>Add Your Favorite Burger</h2>
+<form method="POST" action="/" class="button-size">
+	<textarea type="text" name="burgerAdd"></textarea>
+	<button type="submit">ADD BURGER</button>
+</form>
+
+<img src="http://www.freepngimg.com/download/burger/8-2-burger-picture.png" alt="Burger" style="width:304px;height:228px;">
